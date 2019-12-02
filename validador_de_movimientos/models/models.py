@@ -20,6 +20,7 @@ class bloqueo_mercancai(models.Model):
 class bloqueo_principal(models.Model):
     _inherit = 'stock.picking'
 
+    @api.multi
     def button_vali(self):
         for record in self:
             if record.move_ids_without_package:
